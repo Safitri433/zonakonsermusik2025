@@ -106,7 +106,8 @@ include "koneksi.php";
       </div>
     </section>
     <!-- article end -->
-    <!-- gallery begin -->
+
+     <!-- gallery begin -->
     <section id="gallery" class="text-center p-5 bg-danger-subtle">
   <div class="container">
     <h1 class="fw-bold display-4 pb-3 text-danger">Gallery Konser</h1>
@@ -114,24 +115,22 @@ include "koneksi.php";
        <div id="carouselExample" class="carousel slide">
               <div class="carousel-inner">
                 <div class="carousel-item active">
-          <img src="https://unair.ac.id/wp-content/uploads/2024/04/Aksi-Bruno-Mars-dalam-Konser-20231123154324-1536x1016.webp"            class="d-block w-100 rounded" alt="Jakarta Fair Kemayoran 2025">
+          <img src="img/galeri1.jpg" class="d-block w-100 rounded" alt="Jakarta Fair Kemayoran 2025">
           </div>
         <div class="carousel-item">
-          <img src="https://cdn.pixabay.com/photo/2016/11/19/11/11/dua-lipa-1838653_1280.jpg"
+          <img src="img/gambar2.jpg"
                class="d-block w-100 rounded"alt="Premiere Sabang Merauke 2025">
           </div>
         <div class="carousel-item">
-          <img src="https://kemenpar.go.id/_next/image?url=https%3A%2F%2Fapi.kemenpar.go.id%2Fstorage%2Fapp%2Fuploads%2Fpublic%2F67e%2Fd40%2Fced%2F67ed40ced157d243715809.png&w=1920&q=75"
+          <img src="img/gambar3.jpg"
                class="d-block w-100 rounded"
-               alt="Pestapora 2025: Festival Musik">
+                alt="Pestapora 2025: Festival Musik">
           </div>
         <div class="carousel-item">
-          <img src="https://img.antarafoto.com/cache/1200x800/2023/03/12/konser-blackpink-14mmc-dom.webp"
-                     class="d-block w-100 rounded" alt="BLACKPINK Jakarta 2024">
+          <img src="img/gambar4.jpg" class="d-block w-100 rounded" alt="BLACKPINK Jakarta 2024">
         </div>
         <div class="carousel-item">
-          <img src="https://eventguide.id/wp-content/uploads/2023/06/mahalini1.jpeg"
-                      class="d-block w-100 rounded"alt="Coldplay Jakarta 2023">
+          <img src="img/gambar5.jpg" class="d-block w-100 rounded"alt="Coldplay Jakarta 2023">
          </div>
         </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -145,7 +144,6 @@ include "koneksi.php";
             </div>
         </div>
     </section>
-
 
    <!-- ACTIVITY START -->
     <section id="schedule" class="text-center p-5">
