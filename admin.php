@@ -76,15 +76,21 @@ if (!isset($_SESSION['username'])) {
     <section id="content" class="p-5">
         <div class="container"> 
            						<?php
-            if (isset($_GET['page'])) {
-                $page = $_GET['page'];
-            } else {
-                $page = "dashboard";
-            }
+if (isset($_GET['page'])) {
+    $page = $_GET['page'];
+} else {
+    $page = "dashboard";
+}
 
-            echo '<h4 class="lead display-6 pb-2 border-bottom border-danger-subtle">' . $page . '</h4>';
-            include($page . ".php");
-            ?>
+if ($page == 'dashboard') {
+    include 'dashboard.php';
+} elseif ($page == 'article') {
+    include 'article.php';
+} elseif ($page == 'gallery') {
+    include 'gallery_search.php';
+}
+?>
+
         </div> 
     </section>
     <!-- content end -->
