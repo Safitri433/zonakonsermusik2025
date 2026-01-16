@@ -66,7 +66,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `foto`) VALUES
-(1, 'admin', 'e10adc3949ba59abbe56e057f20f883e', '');
+(1, 'admin', 'e10adc3949ba59abbe56e057f20f883e', ''),
+(2, 'april', '37d153a06c79e99e4de5889dbe2e7c57','');
 
 --
 -- Indexes for dumped tables

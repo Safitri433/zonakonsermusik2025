@@ -14,5 +14,8 @@ if($conn->connect_error){
     die("Connection failed : ". $conn->connect_error);
 }
 
+// 🔥 INI YANG KAMU TAMBAHKAN
+$conn->set_charset("utf8mb4");
+
 //echo "Connected successfully<hr>";
 ?>

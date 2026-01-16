@@ -87,7 +87,7 @@ include "koneksi.php";
           <!-- 1 -->
           <div class="col">
             <div class="card h-100">
-              <img src="<?= $row["gambar"]?>" class="card-img-top" alt="..."/>
+              <img src="img/<?= $row["gambar"] ?>" class="card-img-top" alt="..."/>
               <div class="card-body">
                 <h5 class="card-title"><?= $row["judul"]?></h5>
                 <p class="card-text"><?= $row["isi"]?></p>
