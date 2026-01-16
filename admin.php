@@ -47,23 +47,27 @@ if (!isset($_SESSION['username'])) {
         <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-dark">
+
             <li class="nav-item">
     			<a class="nav-link" href="admin.php?page=dashboard">Dashboard</a>
 			</li>
 			<li class="nav-item">
    				 <a class="nav-link" href="admin.php?page=article">Article</a>
 			</li>
-            
             <li class="nav-item">
-   				 <a class="nav-link" href="admin.php?page=article">Gallery</a>
+   				 <a class="nav-link" href="admin.php?page=gallery">Gallery</a>
 			</li>
-
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-danger fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <?= $_SESSION['username']?>
                 </a>
                 <ul class="dropdown-menu">
+                    <li>
+                <a class="dropdown-item" href="admin.php?page=profile">Profile</a>
+                     </li>
+               <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="logout.php">Logout</a></li> 
                 </ul>
             </li> 
@@ -76,34 +80,35 @@ if (!isset($_SESSION['username'])) {
     <section id="content" class="p-5">
         <div class="container"> 
            						<?php
-if (isset($_GET['page'])) {
-    $page = $_GET['page'];
-} else {
-    $page = "dashboard";
-}
+            if (isset($_GET['page'])) {
+                $page = $_GET['page'];
+            } else {
+                $page = "dashboard";
+            }
 
-if ($page == 'dashboard') {
-    include 'dashboard.php';
-} elseif ($page == 'article') {
-    include 'article.php';
-} elseif ($page == 'gallery') {
-    include 'gallery_search.php';
-}
-?>
-
+            echo '<h4 class="lead display-6 pb-2 border-bottom border-danger-subtle">' . $page . '</h4>';
+             include($page . ".php");
+            ?>
         </div> 
     </section>
     <!-- content end -->
 	 		<!-- footer begin -->
-    <footer class="text-center p-3 bg-danger-subtle">
-			<div>
-				<a href="https://www.instagram.com/udinusofficial"><i class="bi bi-instagram h2 p-2 text-dark"></i></a>
-				<a href="https://twitter.com/udinusofficial"><i class="bi bi-twitter h2 p-2 text-dark"></i></a>
-				<a href="https://wa.me/+6285210116375"><i class="bi bi-whatsapp h2 p-2 text-dark"></i></a>
-			</div>
-			<div>Novia Safitri &copy; 2025</div>
-    </footer>
-    <!-- footer end -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+      <!-- FOOTER START -->
+       <footer class="text-center p-5">
+       <div>
+        <a href="https://www.instagram.com/safazraa"><i class="bi bi-instagram h2 p-2 text-dark"></i></a>
+        <a href="https://x.com/safazraa"><i class="bi bi-twitter-x h2 p-2 text-dark"></i></a>
+        <a href="https://wa.me/+6285875644600"><i class="bi bi-whatsapp h2 p-2 text-dark"></i></a>
+      </div>
+    <div><p>Novia Safitri &copy; 2025</p></div>
+    	<!-- Tombol Back to Top -->
+    <button
+      id="backToTop"
+      class="btn btn-danger rounded-circle position-fixed bottom-0 end-0 m-3 d-none"
+    >
+      <i class="bi bi-arrow-up" title="Back to Top"></i>
+    </button> 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

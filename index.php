@@ -88,6 +88,7 @@ include "koneksi.php";
           <div class="col">
             <div class="card h-100">
               <img src="img/<?= $row["gambar"] ?>" class="card-img-top" alt="..."/>
+
               <div class="card-body">
                 <h5 class="card-title"><?= $row["judul"]?></h5>
                 <p class="card-text"><?= $row["isi"]?></p>
@@ -109,7 +110,7 @@ include "koneksi.php";
 
      <section id="gallery" class="text-center p-5">
         <div class="container">
-          <h1 class="fw-bold display-4 pb-3">gallery</h1>
+          <h1 class="fw-bold display-4 pb-3 text-danger">Gallery</h1>
             <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
             <?php
             $sql = "SELECT * FROM article ORDER BY tanggal DESC";
@@ -139,7 +140,7 @@ include "koneksi.php";
 
    <!-- ACTIVITY START -->
     <section id="schedule" class="text-center p-5">
-      <h1 class="fw-bold display-4 pb-3">Schedule</h1>
+      <h1 class="fw-bold display-4 pb-3 text-danger">Schedule</h1>
       <div
         class="row row-cols-2 row-cols-sm-3 row-cols-lg-4 g-4 justify-content-center"
       >
@@ -191,7 +192,7 @@ include "koneksi.php";
   <!-- ABOUT ME START -->
    <section id="About_Me" class="py-5" style="background-color: #f8dada;">
   <div class="container">
-    <h2 class="text-center mb-4 fw-bold">About Me</h2>
+    <h1 class="text-center display-4 pb-3 fw-bold">About Me</h1>
     <div class="accordion" id="accordionExample">
         <div class="accordion-item">
           <h2 class="accordion-header">
@@ -287,14 +288,13 @@ include "koneksi.php";
     </section>
     <!-- ABOUT ME END -->
      <!-- FOOTER START -->
-    <footer class="text-center p-5">
-      <div>
-        <i class="h2 bi bi-instagram p-2"></i>
-        <i class="h2 bi bi-twitter p-2"></i>
-        <i class="h2 bi bi-whatsapp p-2"></i>
+      <footer class="text-center p-5">
+       <div>
+        <a href="https://www.instagram.com/safazraa"><i class="bi bi-instagram h2 p-2 text-dark"></i></a>
+        <a href="https://x.com/safazraa"><i class="bi bi-twitter-x h2 p-2 text-dark"></i></a>
+        <a href="https://wa.me/+6285875644600"><i class="bi bi-whatsapp h2 p-2 text-dark"></i></a>
       </div>
-     <div><p>Novia Safitri &copy; 2025</p></div>
-    </footer>
+      <div><p>Novia Safitri &copy; 2025</p></div>
     	<!-- Tombol Back to Top -->
     <button
       id="backToTop"

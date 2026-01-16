@@ -70,12 +70,11 @@ if (isset($_SESSION ['username'])) {
     <?php
 //set variable username dan password dummy
 //SANDINYAAAAAAA
-
-//login 1
+//sandi 1
 $username = "admin";
 $password = "123456";
 
-//login
+//sandi 2
 
 $username = "april";
 $password = "april";
