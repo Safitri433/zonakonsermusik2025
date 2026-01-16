@@ -54,7 +54,7 @@ if (!isset($_SESSION['username'])) {
 			<li class="nav-item">
    				 <a class="nav-link" href="admin.php?page=article">Article</a>
 			</li>
-
+            
             <li class="nav-item">
    				 <a class="nav-link" href="admin.php?page=article">Gallery</a>
 			</li>
