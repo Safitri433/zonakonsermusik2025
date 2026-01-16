@@ -107,40 +107,32 @@ include "koneksi.php";
     </section>
     <!-- article end -->
 
-     <!-- gallery begin -->
-    <section id="gallery" class="text-center p-5 bg-danger-subtle">
-  <div class="container">
-    <h1 class="fw-bold display-4 pb-3 text-danger">Gallery Konser</h1>
-    <p class="text-muted mb-4">Momen spektakuler dari konser musik terbaik tahun 2025</p>
-       <div id="carouselExample" class="carousel slide">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-          <img src="img/galeri1.jpg" class="d-block w-100 rounded" alt="Jakarta Fair Kemayoran 2025">
-          </div>
-        <div class="carousel-item">
-          <img src="img/gambar2.jpg"
-               class="d-block w-100 rounded"alt="Premiere Sabang Merauke 2025">
-          </div>
-        <div class="carousel-item">
-          <img src="img/gambar3.jpg"
-               class="d-block w-100 rounded"
-                alt="Pestapora 2025: Festival Musik">
-          </div>
-        <div class="carousel-item">
-          <img src="img/gambar4.jpg" class="d-block w-100 rounded" alt="BLACKPINK Jakarta 2024">
-        </div>
-        <div class="carousel-item">
-          <img src="img/gambar5.jpg" class="d-block w-100 rounded"alt="Coldplay Jakarta 2023">
-         </div>
-        </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+     <section id="gallery" class="text-center p-5">
+        <div class="container">
+          <h1 class="fw-bold display-4 pb-3">gallery</h1>
+            <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+            <?php
+            $sql = "SELECT * FROM article ORDER BY tanggal DESC";
+            $hasil = $conn->query($sql); 
+
+            while($row = $hasil->fetch_assoc()){
+            ?>
+            <!-- col begin -->
+              <div class="col">
+                <div class="card h-100">
+                  <img src="img/<?= $row["gambar"]?>" class="card-img-top" alt="drama Korea Queen Mantis bergenre misteri psikologis">
+                  <div class="card-body">
+                    <h5 class="card-title"><?= $row["judul"]?></h5>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-body-secondary"><?= $row["tanggal"]?></small>
+                  </div>
+                </div>
+              </div>
+            <!-- col end -->
+            <?php
+            }
+            ?>
             </div>
         </div>
     </section>
